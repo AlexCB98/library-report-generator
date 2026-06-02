@@ -6,7 +6,10 @@ with open('Output/library_report.txt', mode = 'w') as write_report:
                        '===============\n'
                        f'Total books: {len(list_books)}'
                        '\n'
-                       'Books')
+                       '\nBooks: \n')
 
-
-    
+    counter = 1
+    for book in list_books:
+        clear_book_name = book.strip()
+        write_report.write(f'{counter}. {clear_book_name}\n')
+        counter += 1
